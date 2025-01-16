@@ -15,11 +15,25 @@ handle_fortuneteller() {
 		fortune=$(jq -r '.data.sooth' <<<"$sooth")
 	else
 		echo "invalid option"
-		recurse
+		handle_fortuneteller
 	fi
 }
+
 read -p "What is your name: " name
-read -p "What knowledge do you seek? " saught
-display_menu
-handle_fortuneteller
-printf "\n\n Hello, $name, \n\n $saught \n\n $fortune \n\n"
+
+app() {
+	read -p "What knowledge do you seek? " saught
+	display_menu
+	handle_fortuneteller
+	printf "\n\n Hello, $name, \n\n $saught \n\n $fortune \n\n"
+
+	read -p "Continue? (y/n) " repeat
+
+	if [ $repeat == "y" ] || [ $repeat == "Y" ]; then
+		app
+	else
+		echo "Goodbye!"
+	fi
+}
+
+app
