@@ -2,5 +2,5 @@
 prompts a questions for the soothsayer-api, then outputs a
 "fortune."</h3>
 
-![image](https://github.com/JustinLawrenceMS/soothsayer_sh/assets/43936909/7f9e7b2d-789a-4447-bb3a-b146d0b04cbf)
+<img width="1470" alt="image" src="https://github.com/user-attachments/assets/730d3a90-db87-43bc-8d71-bf7d538fb293" />
 
